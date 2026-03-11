@@ -8,10 +8,6 @@ def monitorar(intervalo_segundos=60 ):
     while True:
         snapshot_atual = execute_select()
         # if not bool(snapshot_atual):
-            
-
-        # if snapshot_atual and len(snapshot_atual) > 0:
-        #     print("Colunas disponíveis:", list(snapshot_atual[0].keys())) 
 
         if snapshot_atual is False:
             print("Erro consulta DB")
@@ -20,7 +16,7 @@ def monitorar(intervalo_segundos=60 ):
             print(f"Estado inicial carregado — {len(snapshot_atual)} registro(s).")
             snapshot_anterior = snapshot_atual
         else:
-            for row_atual in snapshot_atual:  # ✅ indentação correta
+            for row_atual in snapshot_atual:
                 row_anterior = next((r for r in snapshot_anterior if r["ID"] == row_atual["ID"]), None)
 
                 if row_anterior is None:

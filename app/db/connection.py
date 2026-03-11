@@ -22,7 +22,7 @@ def execute_select(params=None):
         
         # Substitua a consulta abaixo pela sua consulta real, usando parâmetros se necessário
         query = """
-            SELECT *
+            SELECT * 
             FROM Processamento_Kit
             WHERE ((Status_Processamento IS NULL AND Created_At > NOW() - INTERVAL 10 MINUTE)
                 OR Status_Processamento = 'FAIL')

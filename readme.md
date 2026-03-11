@@ -21,4 +21,9 @@ for db in db_cursor:
 	print(db) -->
 
 
+            
+
+        # if snapshot_atual and len(snapshot_atual) > 0:
+        #     print("Colunas disponíveis:", list(snapshot_atual[0].keys())) 
+
 Precisa comparar os processo pra NULL e FAIL já que ele apenas considera IDs na hora do check,
